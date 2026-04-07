@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Johnny Gallick">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="icon" href="data:,">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="../static/script.js" defer></script>
+    <title>MonoMuse - Order Confirmation</title>
+</head>
+<body onload="addYear()">
+
+    <div class="container">
+
+        <header class="header">
+            <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo">
+        </header>
+
+        <nav class="nav_bar">
+            <a href="../index.html">Home</a>
+            <a href="explore.html">Explore</a>
+            <a href="exhibitions.html">Exhibitions</a>
+            <a href="buytickets.html">Buy Tickets</a>
+            <button class="hamburger" onclick="toggleNav()">&#9776;</button>
+        </nav>
+
+        <main class="main">
+            <h2>Order Confirmation</h2>
+            <p>Thank you for your purchase! Your tickets have been reserved. A confirmation email will be sent to the address you provided.</p>
+
+            <div class="confirmation-box">
+                <h3>Order Summary</h3>
+                <div id="confirmDetails"></div>
+            </div>
+
+            <br>
+            <a class="cta" href="../index.html">Return Home</a>
+        </main>
+
+        <footer class="footer">
+            <p id="copyYear"></p>
+        </footer>
+
+    </div>
+
+</body>
+</html>

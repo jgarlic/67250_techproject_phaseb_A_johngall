@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Johnny Gallick">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="icon" href="data:,">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="../static/script.js" defer></script>
+    <title>MonoMuse - Buy Tickets</title>
+</head>
+<body onload="addYear()">
+
+    <div class="container">
+
+        <header class="header">
+            <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo">
+        </header>
+
+        <nav class="nav_bar">
+            <a href="../index.html">Home</a>
+            <a href="explore.html">Explore</a>
+            <a href="exhibitions.html">Exhibitions</a>
+            <a href="buytickets.html">Buy Tickets</a>
+            <button class="hamburger" onclick="toggleNav()">&#9776;</button>
+        </nav>
+
+        <main class="main">
+            <h2>Buy Tickets</h2>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ticket Type</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>General</td>
+                        <td>General admission for all visitors ages 18 and over. Under 18 free of charge.</td>
+                        <td>$18</td>
+                    </tr>
+                    <tr>
+                        <td>Student</td>
+                        <td>Valid student ID required at entry.</td>
+                        <td>$18</td>
+                    </tr>
+                    <tr>
+                        <td>Member</td>
+                        <td>Active MonoMuse membership ID required. Includes unlimited annual visits.</td>
+                        <td>$18</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Available Dates — May 2026</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Hours</th>
+                        <th>Availability</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>May 3, 2026</td>
+                        <td>10:00 AM - 5:00 PM</td>
+                        <td>Available</td>
+                        <td><button class="buy-now-btn" onclick="showForm()">Buy Now</button></td>
+                    </tr>
+                    <tr>
+                        <td>May 10, 2026</td>
+                        <td>10:00 AM - 5:00 PM</td>
+                        <td>Available</td>
+                        <td><button class="buy-now-btn" onclick="showForm()">Buy Now</button></td>
+                    </tr>
+                    <tr>
+                        <td>May 17, 2026</td>
+                        <td>10:00 AM - 5:00 PM</td>
+                        <td>Available</td>
+                        <td><button class="buy-now-btn" onclick="showForm()">Buy Now</button></td>
+                    </tr>
+                    <tr>
+                        <td>May 24, 2026</td>
+                        <td>10:00 AM - 5:00 PM</td>
+                        <td>Available</td>
+                        <td><button class="buy-now-btn" onclick="showForm()">Buy Now</button></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div id="ticketForm">
+                <h3>Purchase Tickets</h3>
+                <form>
+
+                    <label for="ticketType">Ticket Type: (required)</label><br>
+                    <select id="ticketType" name="ticketType" required>
+                        <option value="General">General — $18</option>
+                        <option value="Student">Student — $18</option>
+                        <option value="Member">Member — $18</option>
+                    </select><br><br>
+
+                    <label for="name">Name: (required)</label><br>
+                    <input type="text" id="name" name="name"><br>
+                    <span class="error-msg" id="nameError">Please enter your name.</span><br>
+
+                    <label for="email">Email: (required)</label><br>
+                    <input type="email" id="email" name="email"><br>
+                    <span class="error-msg" id="emailError">Please enter a valid email address.</span><br>
+
+                    <label for="quantity">Number of Tickets: (required, 1-10)</label><br>
+                    <input type="number" id="quantity" name="quantity" min="1" max="10" oninput="updatePrice()"><br>
+                    <span class="error-msg" id="quantityError">Please enter a valid ticket quantity (1-10).</span><br>
+
+                    <label for="date">Visit Date: (required)</label><br>
+                    <input type="date" id="date" name="date"><br>
+                    <span class="error-msg" id="dateError">Please select a visit date.</span><br><br>
+
+                    <label for="zip">Zip Code: (optional)</label><br>
+                    <input type="text" id="zip" name="zip" placeholder="5-digit zip code"><br>
+                    <span class="error-msg" id="zipError">Zip code must be exactly 5 digits.</span><br><br>
+
+                    <label>
+                        <input type="checkbox" id="mailingList" name="mailingList">
+                        Join our mailing list for updates and events
+                    </label><br><br>
+
+                    <p id="priceDisplay">Total: $0</p>
+
+                    <button id="submitBtn" type="button" onclick="validateForm()">Place Order</button>
+
+                </form>
+            </div>
+
+        </main>
+
+        <footer class="footer">
+            <p id="copyYear"></p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
+
