@@ -1,3 +1,4 @@
+/* global styles and font */
 * {
     padding: 5px;
     margin: 5px;
@@ -10,12 +11,13 @@
     color: #f5f5f7;
 }
 
+/* logo sizing */
 #logo {
     width: 18%;
     display: block;
 }
 
-
+/* nav link styling with hover feedback */
 nav a {
     text-decoration: none;
     color: #f5f5f7;
@@ -29,11 +31,12 @@ nav a:hover {
     border-color: #4a7c8e;
 }
 
+/* active nav link, set dynamically by js */
 .active {
     color: #7ab3c4;
 }
 
-
+/* buy tickets call to action button on home page */
 .cta {
     display: inline-block;
     background-color: #4a7c8e;
@@ -51,7 +54,7 @@ nav a:hover {
     color: #1a1a2e;
 }
 
-
+/* footer */
 footer {
     border-top: 1px solid rgba(245, 245, 247, 0.12);
     padding: 18px 16px;
@@ -59,7 +62,7 @@ footer {
     color: rgba(245, 245, 247, 0.72);
 }
 
-
+/* table styling with zebra striping */
 th {
     padding-top: 12px;
     padding-bottom: 12px;
@@ -81,13 +84,13 @@ table {
     width: 100%;
 }
 
-
+/* centers all form elements */
 form * {
     margin: auto;
     text-align: center;
 }
 
-
+/* CSS grid layout */
 .container {
     display: grid;
     grid-template-areas:
@@ -119,7 +122,7 @@ form * {
     grid-area: footer;
 }
 
-
+/* read more/read less, hidden by default, shown via jquery */
 #longIntro {
     display: none;
 }
@@ -128,12 +131,13 @@ form * {
     display: none;
 }
 
-
+/* ticket purchase form, hidden until buy now is clicked */
 #ticketForm {
     display: none;
     margin-top: 20px;
 }
 
+/* buy now buttons in the dates table */
 .buy-now-btn {
     background-color: #4a7c8e;
     color: #f5f5f7;
@@ -149,6 +153,7 @@ form * {
     color: #1a1a2e;
 }
 
+/* place order submit button */
 #submitBtn {
     background-color: #4a7c8e;
     color: #f5f5f7;
@@ -164,7 +169,7 @@ form * {
     color: #1a1a2e;
 }
 
-
+/* youtube embed container */
 .video-container {
     margin-top: 20px;
     width: 100%;
@@ -176,20 +181,21 @@ form * {
     height: 360px;
 }
 
-
+/* leaflet map */
 #map {
     height: 400px;
     width: 100%;
     margin-top: 20px;
 }
 
+/* fixes dark background bleeding into leaflet tiles */
 #map * {
     background: transparent;
     margin: 0;
     padding: 0;
 }
 
-
+/* hamburger button, hidden on desktop, shown on mobile via media query */
 .hamburger {
     display: none;
     cursor: pointer;
@@ -200,7 +206,7 @@ form * {
     color: #f5f5f7;
 }
 
-
+/* form validation error messages */
 .error-msg {
     color: #e05c5c;
     font-size: 13px;
@@ -217,13 +223,14 @@ input.input-error {
     border: 1px solid #e05c5c;
 }
 
+/* live price display on buytickets.html */
 #priceDisplay {
     margin-top: 14px;
     font-size: 16px;
     font-weight: 400;
 }
 
-
+/* image gallery */
 .gallery {
     position: relative;
     max-width: 600px;
@@ -279,7 +286,7 @@ input.input-error {
     margin-top: 4px;
 }
 
-
+/* membership and donations box on explore.html */
 .membership-box {
     border: 1px solid rgba(245, 245, 247, 0.12);
     border-radius: 12px;
@@ -288,7 +295,7 @@ input.input-error {
     max-width: 600px;
 }
 
-
+/* order confirmation box */
 .confirmation-box {
     border: 1px solid #4a7c8e;
     border-radius: 12px;
@@ -301,6 +308,7 @@ input.input-error {
     color: #7ab3c4;
 }
 
+/* exhibition and explore page images */
 .main img {
     width: 100%;
     max-width: 500px;
@@ -308,6 +316,7 @@ input.input-error {
     margin-top: 12px;
 }
 
+/* mobile layout, switches to single column below 650px */
 @media only screen and (max-width: 650px) {
 
     #logo {
